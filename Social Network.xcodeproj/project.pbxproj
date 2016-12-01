@@ -26,6 +26,7 @@
 		ABB555376F684CF2F30507E1 /* Pods-Social Network.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Network.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social Network/Pods-Social Network.debug.xcconfig"; sourceTree = "<group>"; };
 		D58A6B541DEFA43200055F58 /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
 		D58A6B561DEFA61000055F58 /* MaterialBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialBtn.swift; sourceTree = "<group>"; };
+		D58A6B581DF01A1E00055F58 /* Social Network.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Social Network.entitlements"; sourceTree = "<group>"; };
 		D5DCD6A91DEF029D00FA857F /* Social Network.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Social Network.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5DCD6AC1DEF029D00FA857F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5DCD6AE1DEF029D00FA857F /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 		D5DCD6AB1DEF029D00FA857F /* Social Network */ = {
 			isa = PBXGroup;
 			children = (
+				D58A6B581DF01A1E00055F58 /* Social Network.entitlements */,
 				D5FAB7951DEF9AFB0007F76D /* Util */,
 				D5DCD6C21DEF68B400FA857F /* Model */,
 				D5DCD6C31DEF68C400FA857F /* View */,
@@ -175,6 +177,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = F7DCB6UXEH;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -393,6 +400,7 @@
 			baseConfigurationReference = ABB555376F684CF2F30507E1 /* Pods-Social Network.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Social Network/Social Network.entitlements";
 				DEVELOPMENT_TEAM = F7DCB6UXEH;
 				INFOPLIST_FILE = "Social Network/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -407,6 +415,7 @@
 			baseConfigurationReference = 054EB96F3487D58A7FD931CF /* Pods-Social Network.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Social Network/Social Network.entitlements";
 				DEVELOPMENT_TEAM = F7DCB6UXEH;
 				INFOPLIST_FILE = "Social Network/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
