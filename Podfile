@@ -11,4 +11,5 @@ target 'Social Network' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'FBSDKLoginKit'
+  pod 'IQKeyboardManagerSwift', '~> 4.0'
 end

@@ -58,7 +58,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bN-BM-Z1i" customClass="RoundBtn" customModule="Social_Network" customModuleProvider="target">
-                                <rect key="frame" x="112.5" y="210" width="150" height="150"/>
+                                <rect key="frame" x="113" y="210" width="150" height="150"/>
                                 <color key="backgroundColor" red="0.22943970561027527" green="0.34702008962631226" blue="0.59602290391921997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="ZRt-dt-t2t"/>
@@ -76,13 +76,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="283" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cqd-Th-2YN" customClass="FancyField" customModule="Social_Network" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="45" width="283" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJM-jE-EH1" customClass="MaterialBtn" customModule="Social_Network" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="90" width="283" height="37"/>
@@ -91,6 +91,9 @@
                                         <state key="normal" title="Sign in">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="sigInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nsO-E0-T3U"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -114,10 +117,52 @@
                             <constraint firstItem="sqF-eD-HJ2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pGk-lz-BdK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="ivG-C8-YYK" id="pC5-4s-ooH"/>
+                        <outlet property="pwdField" destination="cqd-Th-2YN" id="CzX-sz-whh"/>
+                        <segue destination="h0d-jn-bTl" kind="show" identifier="goToFeed" id="PSB-zd-fGF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+        <!--FeedVC-->
+        <scene sceneID="LKQ-uY-wIW">
+            <objects>
+                <viewController id="h0d-jn-bTl" customClass="FeedVC" customModule="Social_Network" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kma-Lv-U4j"/>
+                        <viewControllerLayoutGuide type="bottom" id="rPS-0e-NPO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="umg-eW-S7k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKl-9b-gGy">
+                                <rect key="frame" x="120" y="318" width="135" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Sign out">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOutBtnTapped:" destination="h0d-jn-bTl" eventType="touchUpInside" id="zw2-Av-FY4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="BKl-9b-gGy" firstAttribute="centerX" secondItem="umg-eW-S7k" secondAttribute="centerX" constant="44" id="bnM-dD-sgY"/>
+                            <constraint firstItem="BKl-9b-gGy" firstAttribute="centerY" secondItem="umg-eW-S7k" secondAttribute="centerY" id="n7D-ZW-1of"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="3Qz-r7-UNf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BeD-UP-OKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762" y="-72"/>
         </scene>
     </scenes>
     <resources>

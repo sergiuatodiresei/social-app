@@ -10,6 +10,9 @@
 		5ABB9ABB0E5C8BF01AC50B3C /* Pods_Social_Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5DEF012E342964F292D1CD /* Pods_Social_Network.framework */; };
 		D58A6B551DEFA43200055F58 /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58A6B541DEFA43200055F58 /* FancyField.swift */; };
 		D58A6B571DEFA61000055F58 /* MaterialBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58A6B561DEFA61000055F58 /* MaterialBtn.swift */; };
+		D58A6B5C1DF231D100055F58 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58A6B591DF231D100055F58 /* KeychainItemAccessibility.swift */; };
+		D58A6B5D1DF231D100055F58 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58A6B5A1DF231D100055F58 /* KeychainWrapper.swift */; };
+		D58A6B5F1DF353C200055F58 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58A6B5E1DF353C200055F58 /* FeedVC.swift */; };
 		D5DCD6AD1DEF029D00FA857F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DCD6AC1DEF029D00FA857F /* AppDelegate.swift */; };
 		D5DCD6AF1DEF029D00FA857F /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DCD6AE1DEF029D00FA857F /* SignInVC.swift */; };
 		D5DCD6B21DEF029D00FA857F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5DCD6B01DEF029D00FA857F /* Main.storyboard */; };
@@ -27,6 +30,10 @@
 		D58A6B541DEFA43200055F58 /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
 		D58A6B561DEFA61000055F58 /* MaterialBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialBtn.swift; sourceTree = "<group>"; };
 		D58A6B581DF01A1E00055F58 /* Social Network.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Social Network.entitlements"; sourceTree = "<group>"; };
+		D58A6B591DF231D100055F58 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
+		D58A6B5A1DF231D100055F58 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		D58A6B5B1DF231D100055F58 /* SwiftKeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftKeychainWrapper.h; sourceTree = "<group>"; };
+		D58A6B5E1DF353C200055F58 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		D5DCD6A91DEF029D00FA857F /* Social Network.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Social Network.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5DCD6AC1DEF029D00FA857F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5DCD6AE1DEF029D00FA857F /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -98,6 +105,9 @@
 				D5DCD6C41DEF68CC00FA857F /* Controller */,
 				D5DCD6AC1DEF029D00FA857F /* AppDelegate.swift */,
 				D5DCD6B01DEF029D00FA857F /* Main.storyboard */,
+				D58A6B591DF231D100055F58 /* KeychainItemAccessibility.swift */,
+				D58A6B5A1DF231D100055F58 /* KeychainWrapper.swift */,
+				D58A6B5B1DF231D100055F58 /* SwiftKeychainWrapper.h */,
 				D5DCD6B31DEF029D00FA857F /* Assets.xcassets */,
 				D5DCD6B51DEF029D00FA857F /* LaunchScreen.storyboard */,
 				D5DCD6B81DEF029D00FA857F /* Info.plist */,
@@ -128,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				D5DCD6AE1DEF029D00FA857F /* SignInVC.swift */,
+				D58A6B5E1DF353C200055F58 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -176,6 +187,7 @@
 					D5DCD6A81DEF029D00FA857F = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = F7DCB6UXEH;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -270,11 +282,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D58A6B5D1DF231D100055F58 /* KeychainWrapper.swift in Sources */,
 				D58A6B551DEFA43200055F58 /* FancyField.swift in Sources */,
+				D58A6B5F1DF353C200055F58 /* FeedVC.swift in Sources */,
 				D5FAB7941DEF99FA0007F76D /* MaterialView.swift in Sources */,
 				D5FAB7991DEF9E070007F76D /* RoundBtn.swift in Sources */,
 				D5DCD6AF1DEF029D00FA857F /* SignInVC.swift in Sources */,
 				D5DCD6AD1DEF029D00FA857F /* AppDelegate.swift in Sources */,
+				D58A6B5C1DF231D100055F58 /* KeychainItemAccessibility.swift in Sources */,
 				D5FAB7971DEF9B280007F76D /* Constants.swift in Sources */,
 				D58A6B571DEFA61000055F58 /* MaterialBtn.swift in Sources */,
 			);
