@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5ABB9ABB0E5C8BF01AC50B3C /* Pods_Social_Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5DEF012E342964F292D1CD /* Pods_Social_Network.framework */; };
+		D554B62D1E19818C004ECC05 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D554B62C1E19818C004ECC05 /* DataService.swift */; };
 		D58A6B551DEFA43200055F58 /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58A6B541DEFA43200055F58 /* FancyField.swift */; };
 		D58A6B571DEFA61000055F58 /* MaterialBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58A6B561DEFA61000055F58 /* MaterialBtn.swift */; };
 		D58A6B5C1DF231D100055F58 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58A6B591DF231D100055F58 /* KeychainItemAccessibility.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		054EB96F3487D58A7FD931CF /* Pods-Social Network.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Network.release.xcconfig"; path = "Pods/Target Support Files/Pods-Social Network/Pods-Social Network.release.xcconfig"; sourceTree = "<group>"; };
 		ABB555376F684CF2F30507E1 /* Pods-Social Network.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Social Network.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Social Network/Pods-Social Network.debug.xcconfig"; sourceTree = "<group>"; };
+		D554B62C1E19818C004ECC05 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		D58A6B541DEFA43200055F58 /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
 		D58A6B561DEFA61000055F58 /* MaterialBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialBtn.swift; sourceTree = "<group>"; };
 		D58A6B581DF01A1E00055F58 /* Social Network.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Social Network.entitlements"; sourceTree = "<group>"; };
@@ -81,9 +83,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D554B62B1E198100004ECC05 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D554B62C1E19818C004ECC05 /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		D5DCD6A01DEF029D00FA857F = {
 			isa = PBXGroup;
 			children = (
+				D554B62B1E198100004ECC05 /* Services */,
 				D5DCD6AB1DEF029D00FA857F /* Social Network */,
 				D5DCD6AA1DEF029D00FA857F /* Products */,
 				3647226281FB68F9900D127C /* Pods */,
@@ -289,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D58A6B5D1DF231D100055F58 /* KeychainWrapper.swift in Sources */,
+				D554B62D1E19818C004ECC05 /* DataService.swift in Sources */,
 				D58A6B551DEFA43200055F58 /* FancyField.swift in Sources */,
 				D58A6B5F1DF353C200055F58 /* FeedVC.swift in Sources */,
 				D5FAB7941DEF99FA0007F76D /* MaterialView.swift in Sources */,
