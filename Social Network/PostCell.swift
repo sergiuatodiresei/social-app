@@ -18,8 +18,11 @@ class PostCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
     
+    func configureCell(post: Post) {
+        self.caption.text = post.caption
+        self.likesLbl.text = "\(post.likes)"
+    }
 
 }
